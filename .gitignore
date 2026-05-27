@@ -1,41 +1,38 @@
-# Compiled Lua sources
-luac.out
+#Create a Part in Explorer, Workspace
+#after you created a part, put a script in it (read the guide)
+#and after all of that, simply put this scipt below! 
+#Tip: in Roblox Studio, there are multiple tabs, eg Home, Avatar, Ui, Script, Model, Plugins.   
+#then find a button inside the Script which is called Format, click on the down arrow and click Format Document, this makes the script tidier :)
 
-# luarocks build files
-*.src.rock
-*.zip
-*.tar.gz
 
-# Object files
-*.o
-*.os
-*.ko
-*.obj
-*.elf
 
-# Precompiled Headers
-*.gch
-*.pch
+script.Parent.BrickColor=BrickColor.Gray()
+--sets the colour of the part to Gray
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-*.def
-*.exp
+script.Parent.Touched:Connect(function()
+	--if a player touches this part do..
+	script.Parent.CanTouch=false
+	--makes it so the player cannot activate this script a lot of times in a short period
+	wait(1)
+	script.Parent.BrickColor=BrickColor.Red()
+	--turns the part red
+	script.Parent.Material=Enum.Material.Neon
+	--makes the part glow so it looks way cooler :D
+	wait(1)
+	script.Parent.Transparency = 1
+	--makes the part invisible
+	script.Parent.CanCollide=false
+	--makes the part untouchable; the player cant touch it
+	wait(2)
+	script.Parent.BrickColor=BrickColor.Gray()
+	--makes the part gray
+	script.Parent.Material=Enum.Material.Plastic
+	--makes the part go back to its original material (it doesnt glow anymore :(
+	script.Parent.Transparency=0
+	--makes the part visible again
+	script.Parent.CanCollide=true
+	--makes the part touchable again
+	script.Parent.CanTouch=true
+	--makes it that the script can now activate again
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
+end)
