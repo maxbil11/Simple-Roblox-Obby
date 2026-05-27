@@ -4,6 +4,8 @@
 #Tip: in Roblox Studio, there are multiple tabs, eg Home, Avatar, Ui, Script, Model, Plugins.   
 #then find a button inside the Script which is called Format, click on the down arrow and click Format Document, this makes the script tidier :)
 
+#Info: This script will make the part disappear for few secs and appear back upon touching.
+
 
 
 script.Parent.BrickColor=BrickColor.Gray()
