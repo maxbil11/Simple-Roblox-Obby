@@ -1,5 +1,5 @@
 # Simple-Roblox-Obby
-The process how to create obby parts for an obby and teach some basic stuff in Roblox Studio
+The process how to create obby parts for an obby and learn some basic stuff in Roblox Studio
 
 
 
